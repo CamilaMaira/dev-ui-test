@@ -10,6 +10,8 @@ import { dataDummyService, Data } from './services/dataDummy.service';
 
 export class AppComponent implements OnInit {
 
+  total: number;
+  blue: number;
   dataDummy:Data[] = [];
 
  constructor( private _dataDummyService: dataDummyService ) {
@@ -19,7 +21,21 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.dataDummy = this._dataDummyService.getData();
     console.log(this.dataDummy);
+
+    this.total = this.dataDummy.reduce((
+      acc,
+      obj,
+    ) => acc + (obj.value + obj.value),
+    0);
+    return (
+      console.log("Total: ", this.total)
+    );
+
+    
   }
+        
+
+        
 
     /* dataDummy = [
     {

@@ -27,14 +27,39 @@
       <article class="ranking">
         <p class="title-ranking">RANKING</p>
           <table class="inside-ranking" *ngFor="let Data of dataDummy">
+            <div class="name-ranking">
+            <td class="id"> {{ Data.id+1+"." }}</td>
             <td> {{ Data.name }} {{ Data.lastname }}</td>
-            <td> {{ Data.value }}</td>
+          </div>
+            <td class="value"> {{ Data.value }}</td>
           </table>
       </article>
 
       <article class="estatus">
         <p class="title-estatus">ESTATUS</p>
-          <p class="inside-estatus">hola</p>
+
+        <div class="blue">
+          <div class="blue-section">
+            <p>Azules</p>
+            <p class="meta">Meta: 100</p>
+          </div>
+          <div class="bar">
+            <div class=bar-40>40</div>
+          </div>
+        
+        </div>
+      
+       <div class="red">
+        <div class="red-section">
+          <p>Rojos</p>
+          <p class="meta">Meta: 100</p>
+        </div>
+        <div class="bar">
+          <div class="bar-21">21</div>
+         </div>
+      </div>
+        <!-- <td> {{ this.total }}</td> -->
+
       </article>
     </section>
 

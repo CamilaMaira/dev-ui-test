@@ -49,7 +49,6 @@ h3 {
 
 .ranking {
   width: 40%;
-  height: 80px;
 }
 
 .title-ranking, .title-estatus {
@@ -68,20 +67,83 @@ h3 {
 .inside-ranking {
   display: flex;
   font-size: 15px;
+  font-weight: bold;
+  justify-content: space-between;
   color: black;
   border: 1px solid #888888;
-  height: 40px;
+  height: 47px;
   align-items: center;
-
 }
+
+.name-ranking {
+  margin-left: 20px;
+}
+
+.id {
+ padding-right: 20px;
+}
+
+.value {
+  padding-right: 30px;
+  width: 20px;
+  text-align: center;
+}
+
 .estatus {
   width: 55%;
-  height: 100px;
 }
 
-.inside-estatus {
+.blue, .red {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100px;
   border: 1px solid #888888;
+  padding-bottom: 20px;
+}
+
+.meta {
+  color: #888888;
+}
+
+.blue-section, .red-section {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.bar {
+  margin-left: 15px;
+  width: 95%;
+  background-color: #EEEEEE;
+  height: 50px;
+  text-align: center;
+}
+
+.bar-40{
+  width: 40%;
+  background-color: #00C4D6; ;
+  height: 100%;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.bar-21{
+  width: 21%;
+  background-color: #CA7C7C;
+  height: 100%;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 
 .buttons {
@@ -117,11 +179,7 @@ h3 {
   color: white;
   border-radius: 5px;
   border: none;
-
 }
-
-
-
 
 /* * * * * * COLORS * * * * * */
 $color1: #00C4D6;
