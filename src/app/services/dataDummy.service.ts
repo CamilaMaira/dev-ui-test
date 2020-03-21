@@ -1,27 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { dataDummyService, Data } from './services/dataDummy.service';
+import { Injectable } from '@angular/core';
 
+@Injectable()
+export class dataDummyService {
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
+  private dataDummy:Data[] = [
 
-export class AppComponent implements OnInit {
-
-  dataDummy:Data[] = [];
-
- constructor( private _dataDummyService: dataDummyService ) {
-
-  } 
-
-  ngOnInit() {
-    this.dataDummy = this._dataDummyService.getData();
-    console.log(this.dataDummy);
-  }
-
-    /* dataDummy = [
     {
       'name': 'Stephen',
       'lastname': 'Strange',
@@ -53,5 +36,20 @@ export class AppComponent implements OnInit {
       'value': 17
     },
   ]; 
- */
+
+
+  constructor() { 
+
+  }
+
+  getData(){
+    return this.dataDummy;
+  }
 }
+
+export interface Data{
+  name: string;
+  lastname: string;
+  color: string;
+  value: number;
+};

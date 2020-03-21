@@ -19,9 +19,32 @@
     </nav>
 
     <section>
-      <h3>Indicadores</h3>
-      <h2>Diciembre 2019</h2>
+      <h2>Indicadores</h2>
+        <h3>Diciembre 2019</h3>
     </section>
+
+    <section>
+      <article class="ranking">
+        <p class="title-ranking">RANKING</p>
+          <table class="inside-ranking" *ngFor="let Data of dataDummy">
+            <td> {{ Data.name }} {{ Data.lastname }}</td>
+            <td> {{ Data.value }}</td>
+          </table>
+      </article>
+
+      <article class="estatus">
+        <p class="title-estatus">ESTATUS</p>
+          <p class="inside-estatus">hola</p>
+      </article>
+    </section>
+
+    <div class="buttons">
+    <button class="btn-back">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00C4D6" width="20px" height="20px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
+    ATRÁS</button>
+
+    <button class="btn-next">SIGUIENTE</button>
+  </div>
 
   
   
